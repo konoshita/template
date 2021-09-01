@@ -1,11 +1,13 @@
-Rails サンプルベース
-====================
+Rails AdminLTE サンプル
+=======================
 
 [![Build status][shield-build]](#)
 [![MIT licensed][shield-license]](#)
 [![Rails][shield-rails]][rails]
 
-Rails サンプルを作成するためのベース
+Rails 6 に AdminLTE 3 を導入するサンプル
+
+CDN を利用してお手軽に導入する方法。
 
 ## Table of Contents
 
@@ -20,75 +22,59 @@ Rails サンプルを作成するためのベース
 ## Technologies
 
 * [Rails][rails] 6.0.4.1
+* [AdminLTE](https://adminlte.io/) 3.1
+* [Bootstrap](https://getbootstrap.com/) 4.6
 * [PostgreSQL][postgresql]
 * [Heroku][heroku]
 
 ## Demo
 
-* [Heroku](https://kyuuki-sample-rails-base.herokuapp.com)
+* [Heroku](https://kyuuki-sample-rails-adminlte.herokuapp.com)
 
 ## Getting started
 
 ### Rails アプリケーション作成
 
 ```sh
-$ rails new sample-rails-base -d postgresql --skip-turbolinks
-$ cd sample-rails-base
-$ git add .
-$ git commit -m "Initial commit"
+$ git clone git@github.com:kyuuki/sample-rails-base.git sample-rails-adminlte
+$ cd sample-rails-adminlte
 ```
 
-### トップページ作成
+- GitHub に sample-rails-adminlte という名前でリポジトリ追加
 
 ```sh
-$ rails g controller StaticPage top
+$ git remote set-url origin git@github.com:kyuuki/sample-rails-adminlte.git
+$ git push origin master
 ```
 
-- [config/routes.rb](config/routes.rb) を編集
+### AdminLTE 導入
 
-```ruby
-Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root 'static_page#top'
-  # root to: 'static_page#top'  # 上記はこれの省略形
-end
-```
+- starter page (https://adminlte.io/themes/v3/starter.html) を各 erb に分割してコピー
 
-- [app/controllers/static_page_controller.rb](app/controllers/static_page_controller.rb) を編集
+- AdminLTE のリンクを CDN のものに変更  
+  https://adminlte.io/docs/3.1/index.html  
+  [[commit]](https://github.com/kyuuki/sample-rails-adminlte/commit/6f9820024de04fa73ed78edfb3fa0746f33f2e38)
 
-```ruby
-class StaticPageController < ApplicationController
-  def top
-    # render :top  # これが省略されている
-  end
-end
-```
+- jQuery と Bootstrap 4 の JavaScript リンクを CDN のものに変更  
+  https://getbootstrap.com/docs/4.6/getting-started/introduction/#bundle  
+  ただし jQuery は slim バージョンではないものに変更する必要がある  
+  https://code.jquery.com/jquery/  
+  [[commit]](https://github.com/kyuuki/sample-rails-adminlte/commit/83a4f514a7fde4f342af7534895e95b1b82df6cf)
 
-- [app/views/static_page/top.html.erb](app/views/static_page/top.html.erb) を編集
+- Font Awesome のリンクを CDN のものに変更  
+  https://fontawesome.com/account/cdn  
+  Font Awesome にユーザー登録する必要がある  
+  [[commit]](https://github.com/kyuuki/sample-rails-adminlte/commit/7bd5a0dd7e8ec498505ef02444fc8a8932248201)
 
-```erb
-<h1>トップページ</h1>
-
-<p>
-  トップページの内容。
-</p>
-```
-
-### GitHub
-
-- GitHub に sample-rails-base という名前でリポジトリ追加
-
-```sh
-$ git remote add origin git@github.com:kyuuki/sample-rails-base.git
-$ git push -u origin master
-```
+- 画像へのリンクを変更  
+  [[commit]](https://github.com/kyuuki/sample-rails-adminlte/commit/8d47bed2c71557bda2d7c518a74a808407b29f91)
 
 ## Deployment
 
 Heroku にデプロイ
 
 ```sh
-$ heroku create kyuuki-sample-rails-base
+$ heroku create kyuuki-sample-rails-adminlte
 $ git push heroku master
 ```
 <!-- $ heroku run rake db:migrate (今回は不要) -->
@@ -96,8 +82,8 @@ $ git push heroku master
 ## Usage
 
 ```sh
-$ git clone git@github.com:kyuuki/sample-rails-base.git
-$ cd sample-rails-base
+$ git clone git@github.com:kyuuki/sample-rails-adminlte.git
+$ cd sample-rails-adminlte
 $ bundle install
 $ yarn install
 $ rails db:create
@@ -107,8 +93,8 @@ $ rails s -b 0.0.0.0
 
 ## References
 
-* [Ruby on Rails Guides (v6.0.x) (英)](https://guides.rubyonrails.org/v6.0/)
-* [Ruby on Rails ガイド (日)](https://railsguides.jp/)
+* [AdminLTE Docs](https://adminlte.io/docs/3.1/)
+* [AdminLTE Live Preview](https://adminlte.io/themes/v3/)
 
 ## License
 
