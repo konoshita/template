@@ -1,4 +1,4 @@
-<% content_for(:title, "Starter Page") %>
+<% content_for(:title, "新規登録") %>
 
 <% content_for :breadcrumb do %>
   <ol class="breadcrumb float-sm-right">
@@ -7,12 +7,4 @@
   </ol>
 <% end %>
 
-<div class="row">
-<div class="col-9">
-  <%= render 'layouts/blockmenu'%>
-</div>
-<div class="col-3">
-  <%= render 'layouts/infobox'%>
-</div>
-</div>
-<!-- /.row -->
+<%= render 'wrap_check'%>

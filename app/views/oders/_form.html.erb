@@ -1,0 +1,76 @@
+<%= form_with model: oder , local: true do |f| %>
+  <div class="form-group">
+    <label>タイトル</label>
+      <%= f.text_field :title, class: 'form-control' %>
+  </div>
+# 筋トレメニュー追加用フォーム
+      <div class="post-workout-menus">
+        <div class="workout-menus-container" id="workout-menus">
+          <%= f.fields_for :products do |menu_form| %>
+            <div class="workout-menu" style="display: <%= 'none' if oder.new_record? %>;">
+      <div class="form-group">
+        <label>症状</label>
+        <%= menu_form.text_field :name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <label>臓腑</label>
+        <%= menu_form.text_field :location, class: 'form-control', step: '0.1', min: '0' %>
+      </div>
+      <div class="form-group">
+        <label>陰陽</label>
+        <%= menu_form.select :kind,['sample1', 'sample2', 'sample3'], {include_blank: '選択ボックス'}, class: 'form-control'%>
+      </div>
+      <div class="form-group">
+        <label>臓腑病</label>
+        <%= menu_form.number_field :level, class: 'form-control' %>
+      </div>
+      <div class="form-group">
+        <label>厚さ</label>
+        <%= menu_form.number_field :volume, class: 'form-control'%>
+      </div>
+    </div>
+          <% end %>
+        </div>
+        <div>
+          <% if oder.new_record? %>
+          <button id="add-menu-button" type="button">筋トレメニュー追加はこちらから</button>
+          メニューは5つまで追加可能
+          <button id="hide-menu-button" type="button" class="btn btn-secondary"><i class="fa-sharp fa-solid fa-minus"></i></button>
+          <% end %>
+        </div>
+      </div>
+      <% if oder.new_record? %>
+        <%= f.submit '新規作成' %>
+      <% else %>
+        <%= f.submit '更新する' %>
+      <% end %>
+      </div>
+    </div>
+  <% end %>
+    
+  <script>
+    document.getElementById("add-menu-button").addEventListener("click", function() {
+      var container = document.getElementById("workout-menus");
+      var workoutMenus = container.getElementsByClassName("workout-menu");
+      
+      // 非表示のフォームを検索し、最初の非表示フォームを表示する
+      for (var i = 0; i < workoutMenus.length; i++) {
+        if (workoutMenus[i].style.display === "none") {
+          workoutMenus[i].style.display = "flex";
+          break;
+        }
+      }
+    });
+    document.getElementById("hide-menu-button").addEventListener("click", function() {
+      var container = document.getElementById("workout-menus");
+      var workoutMenus = container.getElementsByClassName("workout-menu");
+      
+      // 非表示のフォームを検索し、最初の表示されているフォームを非表示にする
+      for (var i = 0; i < workoutMenus.length; i++) {
+        if (workoutMenus[i].style.display !== "none") {
+          workoutMenus[i].style.display = "none";
+          break;
+        }
+      }
+    });
+  </script>

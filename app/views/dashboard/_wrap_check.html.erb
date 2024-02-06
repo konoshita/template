@@ -1,0 +1,174 @@
+<div class="card card-primary card-outline">
+  <table class="table m-1">
+    <form class="form-horizontal">
+        <div class="form-group row">
+          <tbody>
+            <tr>
+              <th scope="row">
+                <label class="control-label" for="status">氏名</label>
+              </th>
+              <td>
+                <div class="col-4">
+                  <input type="text" class="form-control" placeholder=".col-4">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="control-label" for="status">連絡先1</label>
+              </th>
+              <td>
+                <label class="radio-inline mr-5" for="status0">
+                  <input name="status" id="status0" value="public" checked="checked" type="radio">
+                    TEL
+                </label> 
+                <label class="radio-inline mr-5" for="status1">
+                  <input name="status" id="status1" value="private" type="radio">
+                    e-Mail
+                </label>
+                <label class="radio-inline mr-5" for="status1">
+                  <input name="status" id="status1" value="private" type="radio">
+                    LINE
+                </label>
+                <div class="col-4">
+                  <input type="text" class="form-control" placeholder=".col-4">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="control-label" for="status">連絡先2</label>
+              </th>
+              <td>
+                <label class="radio-inline mr-5" for="status0">
+                  <input name="status" id="status0" value="public" checked="checked" type="radio">
+                    TEL
+                </label> 
+                <label class="radio-inline mr-5" for="status1">
+                  <input name="status" id="status1" value="private" type="radio">
+                    e-Mail
+                </label>
+                <label class="radio-inline mr-5" for="status1">
+                  <input name="status" id="status1" value="private" type="radio">
+                    LINE
+                </label>
+                  <div class="col-4">
+                    <input type="text" class="form-control" placeholder=".col-4">
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <!-- 郵便番号(住所自動入力) -->
+			          <label for="post" style="display:block">郵便番号</label>
+              </th>
+              <td>
+                <div class="col-4">
+                  <input type="text" class="form-control" placeholder="ここに数字を入れたら自動入力">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <!-- 都道府県 -->
+                <label for="address">都道府県</label>
+		          </th>
+              <td>
+                <select class="form-control select2" style="width: 15%;">
+                    <option selected="selected">東京</option>
+                    <option>大阪</option>
+                    <option>沖縄</option>
+                    <option>千葉</option>
+                    <option>神奈川</option>
+                    <option>埼玉</option>
+                    <option>福岡</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <!-- 住所 -->
+                <label for="address">市町村</label>
+		          </th>
+              <td>
+                <input type="text" class="form-control" name="address">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <!-- 住所 -->
+                <label for="address">番地</label>
+		          </th>
+              <td>
+                <input type="text" class="form-control" name="address">
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="control-label" for="category">流入経路</label>
+              </th>
+              <td>
+                <label class="checkbox-inline mr-5" for="job_category[0]">
+                  <input name="job_category" id="job_category[0]" value="job_category[0]" type="checkbox">
+                    電話
+                </label>
+                <label class="checkbox-inline mr-5" for="job_category[1]">
+                  <input name="job_category" id="job_category[1]" value="job_category[1]" type="checkbox">
+                    e-mail
+                </label>
+                <label class="checkbox-inline mr-5" for="job_category[2]">
+                  <input name="job_category" id="job_category[2]" value="job_category[2]" type="checkbox">
+                    LINE
+                </label>
+                <label class="checkbox-inline mr-5" for="job_category[0]">
+                  <input name="job_category" id="job_category[0]" value="job_category[0]" type="checkbox">
+                    その他
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="control-label" for="status">主訴</label>
+              </th>
+              <td>
+                <div class="col-4">
+                  <input type="text" class="form-control" placeholder=".col-4">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">
+                <label class="control-label" for="category">患者タグ</label>
+              </th>
+              <td>
+                <label class="checkbox-inline mr-5" for="job_category[0]">
+                  <input name="job_category" id="job_category[0]" value="job_category[0]" type="checkbox">
+                  親の代理
+                </label>
+                <label class="checkbox-inline mr-5" for="job_category[1]">
+                  <input name="job_category" id="job_category[1]" value="job_category[1]" type="checkbox">
+                  クレーム客
+                </label>
+                <label class="checkbox-inline mr-5" for="job_category[2]">
+                  <input name="job_category" id="job_category[2]" value="job_category[2]" type="checkbox">
+                    紹介
+                </label>
+                <label class="checkbox-inline mr-5" for="job_category[0]">
+                  <input name="job_category" id="job_category[0]" value="job_category[0]" type="checkbox">
+                    その他
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class=" submit">
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-info float-right">Sign in</button>
+                  <button type="submit" class="btn btn-default">Cancel</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+      </div>
+    </form>
+  </table>
+</div>

@@ -1,0 +1,23 @@
+<tr>
+  <td>
+    <%= oder.id %>
+  </td>
+  <td>
+    <%= oder.title %>
+  </td>
+  <td>
+    <%= link_to oder_path(oder) do %>
+      <i class="fa fa-plus"></i>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to edit_oder_path(oder) do%>
+      <i class="fa fa-edit"></i>
+      <% end %>
+  </td>
+  <td>
+    <%= link_to  oder_path(oder) , method: :delete, data: { confirm: "#{oder.title}を削除してもよろしいですか？" } do%>
+      <i class="fa fa-trash"></i>
+    <% end %>
+  </td>
+</tr>
