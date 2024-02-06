@@ -1,0 +1,61 @@
+
+# 筋トレメニュー追加用フォーム
+      <div class="post-workout-menus">
+        <div class="workout-menus-container" id="workout-menus">
+            <div class="workout-menu" style="display: none">
+              <div class="form-group">
+                <label>種目</label>
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label>重量</label>
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label>レップ</label>
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label>セット数</label>
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+        </div>
+        <div>
+          <button id="add-menu-button" type="button">筋トレメニュー追加はこちらから</button>
+          メニューは5つまで追加可能
+          <button id="hide-menu-button" type="button" class="btn btn-secondary"><i class="fa-sharp fa-solid fa-minus"></i></button>
+        </div>
+      </div>
+      <div class="card-footer">
+          <button type="submit" class="btn btn-info">Sign in</button>
+          <button type="submit" class="btn btn-default float-right">Cancel</button>
+        </div>
+      </div>
+    </div>
+  <script>
+    document.getElementById("add-menu-button").addEventListener("click", function() {
+      var container = document.getElementById("workout-menus");
+      var workoutMenus = container.getElementsByClassName("workout-menu");
+      
+      // 非表示のフォームを検索し、最初の非表示フォームを表示する
+      for (var i = 0; i < workoutMenus.length; i++) {
+        if (workoutMenus[i].style.display === "none") {
+          workoutMenus[i].style.display = "flex";
+          break;
+        }
+      }
+    });
+    document.getElementById("hide-menu-button").addEventListener("click", function() {
+      var container = document.getElementById("workout-menus");
+      var workoutMenus = container.getElementsByClassName("workout-menu");
+      
+      // 非表示のフォームを検索し、最初の表示されているフォームを非表示にする
+      for (var i = 0; i < workoutMenus.length; i++) {
+        if (workoutMenus[i].style.display !== "none") {
+          workoutMenus[i].style.display = "none";
+          break;
+        }
+      }
+    });
+  </script>

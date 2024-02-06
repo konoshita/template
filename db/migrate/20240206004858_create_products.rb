@@ -5,7 +5,7 @@ class CreateProducts < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.string :location, null: false
       t.string :kind, null: false
-      t.str :level, null: false
+      t.string :level, null: false
       t.string :volume, null: false
 
       t.timestamps

@@ -13,7 +13,7 @@ class OdersController < ApplicationController
   # GET /oders/new
   def new
     @oder = Oder.new
-    2.times { @oder.products.build }
+    5.times { @oder.products.build }
   end
 
   # GET /oders/1/edit
@@ -64,6 +64,6 @@ class OdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def oder_params
-      params.require(:oder).permit(:title, products_attributes: [:id, :name, :location, :kind, :level, :volue,:_destroy])
+      params.require(:oder).permit(:title, products_attributes: [:id, :name, :location, :kind, :level, :volume,:_destroy])
     end
 end
