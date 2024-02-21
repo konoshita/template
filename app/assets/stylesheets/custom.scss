@@ -1,0 +1,239 @@
+a {
+	color: #010101;
+}
+
+.bg-base{
+  background: #4C4B16;
+  color: #FBFADA;
+}
+.card-info:not(.card-outline)>.card-header {
+	background-color: #898121;
+}
+.card-primary.card-outline {
+	border-top: 3px solid #898121;
+}
+
+.horizontal-list {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.item {
+  /* 横スクロール用 */
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  /* 見た目調整 */
+  height: 600px;
+  margin: 16px;
+  background: #f4f6f9;
+}
+.description dl {
+  margin: 5px 0 10px;
+}
+.description dt {
+  width: 30%;
+}
+.description dd {
+  width: 70%;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 10px; /* 上下の余白、左右の余白 */
+  text-decoration: none; /* デフォルトで入るリンクの下線を消す */
+  border-radius: 30px; /* 角を丸くする */
+}
+.tab-wrap {
+	background: White;
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	padding: 0 0 20px;
+}
+
+.tab-label {
+	color: Gray;
+	cursor: pointer;
+	flex: 1;
+	font-weight: bold;
+	order: -1;
+	padding: 12px 24px;
+	position: relative;
+	text-align: center;
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
+	user-select: none;
+	white-space: nowrap;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.tab-label:hover {
+	background:rgba(166,200,31,0.1);
+}
+
+.tab-switch:checked + .tab-label {
+	color: #4C4B16;
+}
+
+.tab-label::after {
+	background: #4C4B16;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 3px;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	transform: translateX(100%);
+	transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
+	width: 100%;
+	z-index: 1;
+}
+
+.tab-switch:checked ~ .tab-label::after {
+	transform: translateX(-100%);
+}
+
+.tab-switch:checked + .tab-label::after {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.tab-content {
+	height:0;
+	opacity:0;
+	padding: 0 20px;
+	pointer-events:none;
+	transform: translateX(-30%);
+	transition: transform .3s 80ms, opacity .3s 80ms;
+	width: 100%;
+}
+
+.tab-switch:checked ~ .tab-content {
+	transform: translateX(30%);
+}
+
+.tab-switch:checked + .tab-label + .tab-content {
+	height: auto;
+	opacity: 1;
+	order: 1;
+	pointer-events:auto;
+	transform: translateX(0);
+}
+
+.tab-wrap::after {
+	content: '';
+	height: 20px;
+	order: -1;
+	width: 100%;
+}
+
+.tab-switch {
+	display: none;
+}
+
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+     height: calc(3rem + 2px) !important;
+     border-radius:0;
+}
+// ブロックボタンレイアウト
+.wrap {
+	// display: flex;
+	text-align: center;
+	background: white;
+	padding: 1rem 1rem 1rem 1rem;
+	border-radius: 0.5rem;
+	box-shadow: 7px 7px 30px -5px rgba(0,0,0,0.1);
+	margin-bottom: 2rem;
+}
+
+.wrap:hover {
+	background: linear-gradient(135deg,#ccc 0%,#d8d8d8 100%);
+	color: white;
+}
+
+.ico-wrap {
+	margin: auto;
+}
+
+.mbr-iconfont {
+	font-size: 3rem !important;
+	color: #313131;
+	margin: 1rem;
+	padding-right: 1rem;
+}
+.vcenter {
+	margin: auto;
+}
+
+.mbr-section-title3 {
+	// text-align: left;
+	font-size: 1.3rem;
+}
+
+.mbr-bold {
+	font-weight: 200;
+}
+
+
+// 可変幅textarea
+.FlexTextarea {
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.FlexTextarea__dummy {
+  overflow: hidden;
+  visibility: hidden;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  min-height: 120px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  border: 1px solid;
+}
+
+.FlexTextarea__textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid #b6c3c6;
+  border-radius: 4px;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  resize: none;
+}
+
+.FlexTextarea__textarea:focus {
+  box-shadow: 0 0 0 4px rgba(35, 167, 195, 0.3);
+  outline: 0;
+}

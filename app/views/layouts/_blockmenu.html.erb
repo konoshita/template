@@ -1,0 +1,56 @@
+<div class="container">
+		<div class="row">
+
+            <div class="col-lg-2 col-md-3 col-sm-4">
+            <%= link_to root_path do%>
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fas fa-th"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class=" mbr-section-title3 ">Dashboard</h2>
+                    </div>
+                </div>
+            <% end %>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+            <%= link_to dashboard_edit_path do%>
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-edit fa"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class=" mbr-section-title3 ">新規登録
+                        </h2>
+                    </div>
+                </div>
+            <% end %>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+            <%= link_to dashboard_index_path do%>
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-search fas"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class=" mbr-section-title3 ">検索
+                        </h2>
+                    </div>
+                </div>
+            <% end %>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4">
+            <%= link_to reservations_path do%>
+                <div class="wrap">
+                    <div class="ico-wrap">
+                        <span class="mbr-iconfont fa-calendar fas"></span>
+                    </div>
+                    <div class="text-wrap vcenter">
+                        <h2 class=" mbr-section-title3 ">予約管理
+                        </h2>
+                    </div>
+                </div>
+            <% end %>
+            </div> 
+        </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="col">
+    <div class="form-area">  
+      <form role="form">
+        <br style="clear:both">
+    			<div class="form-group">
+						  <label style="margin-bottom: 25px; text-align: center;" for="FlexTextarea">対応メモ作成   (伸縮するテキストエリア)</label>
+            <div class="FlexTextarea">
+              <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+                <textarea id="FlexTextarea" class="FlexTextarea__textarea"></textarea>
+              </div>
+					  </div>
+          <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">作成</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+function flexTextarea(el) {
+  const dummy = el.querySelector('.FlexTextarea__dummy')
+  el.querySelector('.FlexTextarea__textarea').addEventListener('input', e => {
+    dummy.textContent = e.target.value + '\u200b'
+  })
+}
+
+document.querySelectorAll('.FlexTextarea').forEach(flexTextarea)
+</script>
