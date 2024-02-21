@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_02_06_004858) do
+ActiveRecord::Schema.define(version: 2024_02_20_091833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 2024_02_06_004858) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["oder_id"], name: "index_products_on_oder_id"
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.date "day", null: false
+    t.string "time", null: false
+    t.datetime "start_time", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   add_foreign_key "products", "oders"

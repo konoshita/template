@@ -9,146 +9,7 @@
 <section class="content">
   <div class="container-fluid">
     <div class="row">
-    <div class="col-md-3">
-        <!-- Profile  -->
-        <div class="card card-primary card-outline">
-          <div class="card-body box-profile">
-            <div class="description">
-              <dl class="d-flex align-items-center">
-                <dt>ID</dt>
-                <dd class="h4">123456</dd>
-              </dl>
-              <dl class="d-flex align-items-center">
-                <dt>名前</dt>
-                <dd class="h4">User name</dd>
-              </dl>
-              <dl class="d-flex align-items-center">
-                <dt></dt>
-                <dd><p class="tag border border-info">クレーム客</p></dd>
-              </dl>
-            </div>
-          </div>
-          <!-- /.card-body -->
-        </div>
-          <!-- 注文 -->
-          <div class="col">
-            <div class="card card-info collapsed-card">
-              <div class="card-header align-items-center">
-                <h3 class="card-title">注文ID: 1234567</h3>
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool mt-1" data-card-widget="collapse"><i class="fas fa-plus"></i></button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <ul class="list-group list-group-unbordered mb-3">
-                  <li class="list-group-item">
-                    <b>日数</b> <p class="float-right">30</p>
-                  </li>
-                  <li class="list-group-item">
-                    <b>担当</b> <p class="float-right">林</p>
-                  </li>
-                  <li class="list-group-item">
-                    <b>注文作成者</b> <p class="float-right">西岡</p>
-                  </li>
-                  <li class="list-group-item">
-                    <b>支払い方法</b> <p class="float-right">代引き</p>
-                  </li>
-                  <li class="list-group-item">
-                    <b>注文回数</b> <p class="float-right">初回</p>
-                  </li>
-                  <li class="list-group-item">
-                    <b>金額</b> <p class="float-right">17,287</p>
-                  </li>
-                </ul>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /注文 -->
-         <!-- 工程管理 -->
-          <div class="col">
-            <div class="card card-info collapsed-card">
-              <div class="card-header align-items-center">
-                <h3 class="card-title">工程管理</h3>
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool mt-1" data-card-widget="collapse"><i class="fas fa-plus"></i></button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-              <table class="table table-sm">
-                <thead>
-                  <tr>
-                    <th style="width: 5%">#</th>
-                    <th>Task</th>
-                    <th>ステータス</th>
-                    <th style="width: 20%">確認</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1.</td>
-                    <td>明細発行</td>
-                    <td>
-                    <button type="button" class="btn btn-outline-primary" disabled>登録済</button>
-                    </td>
-                    <td>西岡</td>
-                  </tr>
-                  <tr>
-                    <td>2.</td>
-                    <td>調剤</td>
-                    <td>
-                    <button type="button" class="btn btn-danger">登録</button>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>3.</td>
-                    <td>梱包</td>
-                    <td>
-                    <button type="button" class="btn btn-danger">登録</button>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>4.</td>
-                    <td>送り状作成</td>
-                    <td>
-                    <button type="button" class="btn btn-danger">登録</button>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>5.</td>
-                    <td>送り状発行</td>
-                    <td>
-                    <button type="button" class="btn btn-danger">登録</button>
-                    </td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td>5.</td>
-                    <td>発送</td>
-                    <td>
-                    <button type="button" class="btn btn-danger">登録</button>
-                    </td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.card-body -->
-          <!-- /工程管理 -->
-        <!-- /Profile -->
-      </div>
+        <%= render 'user'%>
       <div class="col-md-9">
         <!-- Tab -->
           <div class="tab-wrap">
@@ -162,7 +23,7 @@
               </div>
             <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">対応メモ</label>
               <div class="tab-content">
-                もう既に日も落ちて、まちの暗いのは当りまえだが、けれども、なんだか、夜のせいばかりでは無く、市全体が、やけに寂しい。のんきなメロスも、だんだん不安になって来た。路で逢った若い衆をつかまえて、何かあったのか、二年まえに此の市に来たときは、夜でも皆が歌をうたって、まちは賑やかであった筈はずだが、と質問した。若い衆は、首を振って答えなかった。しばらく歩いて老爺ろうやに逢い、こんどはもっと、語勢を強くして質問した。老爺は答えなかった。メロスは両手で老爺のからだをゆすぶって質問を重ねた。老爺は、あたりをはばかる低声で、わずか答えた。
+                <%= render 'taioumemo'%>
               </div>
             <input id="TAB-04" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-04">オプション</label>
               <div class="tab-content">

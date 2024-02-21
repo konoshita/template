@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   get 'dashboard/edit', to: 'dashboard#edit'
   get 'dashboard/top', to: 'dashboard#top'
   get 'dashboard/transe', to: 'dashboard#transe'
-  resources :oders
+  resources :oders, only: %i[index new show create edit update destroy]
+  resources :reservations, only: %i[index new show create edit update destroy] do
+    collection do
+      get 'search'
+    end
+  end
 end
